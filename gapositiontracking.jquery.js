@@ -23,7 +23,7 @@
  					e.preventDefault();
 					console.log("x:"+pX+" y:"+pY+" max:("+w+","+h+") p:("+nC+","+nR+") "+e.target.nodeName+" type:"+type);	
 				}
-				_gaq.push(['_trackEvent', 'Click_Position_Tracking', 'Block('+nC+','+nR+')', type]);
+				_gaq.push(['_trackEvent', 'Click_Position_Tracking', 'Block '+($(this).attr("id")==""?($(this).attr("class")==""?e.target.nodeName:$(this).attr("class")):$(this).attr("id"))+' ('+nC+','+nR+')', type]);
 			});
 		 });
 		return this;
